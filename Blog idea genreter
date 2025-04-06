@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Idea Generator | Boostly.ai</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
+    h1 { color: #333; }
+    textarea, button { width: 100%; padding: 10px; margin-top: 10px; }
+    .output { background: #fff; padding: 15px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>Boostly.ai - Blog Idea Generator</h1>
+  <textarea id="topic" rows="3" placeholder="Enter your niche or keyword..."></textarea>
+  <button onclick="generateIdea()">Generate Blog Idea</button>
+  <div class="output" id="result"></div>
+
+  <script>
+    function generateIdea() {
+      const input = document.getElementById("topic").value;
+      const ideas = [
+        `Top 10 Tips for ${input} in 2025`,
+        `Why ${input} is the Next Big Thing`,
+        `Ultimate Guide to ${input} for Beginners`,
+        `Common Mistakes to Avoid in ${input}`,
+        `How to Start with ${input} from Scratch`
+      ];
+      const random = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById("result").innerText = random;
+    }
+  </script>
+</body>
+</html>
